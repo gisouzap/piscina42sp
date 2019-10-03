@@ -1,1 +1,0 @@
-find . -maxdepth 2 -name "*~" -print -delete -or -name "#*#" -print -delete
