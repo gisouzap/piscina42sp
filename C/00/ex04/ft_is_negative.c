@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsouza-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/05 11:44:46 by gsouza-p          #+#    #+#             */
-/*   Updated: 2019/10/07 16:47:21 by gsouza-p         ###   ########.fr       */
+/*   Created: 2019/10/07 13:41:52 by gsouza-p          #+#    #+#             */
+/*   Updated: 2019/10/07 13:48:35 by gsouza-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void ft_is_negative(int n)
 {
-	write(1, &c, 1);
+	char positive = 'P';
+	char negative = 'N';
+
+	if(n > 0)
+	{
+		write(1,&positive,1);
+	}
+	if(n < 0)
+	{
+		write(1, &negative, 1);
+	}
 }

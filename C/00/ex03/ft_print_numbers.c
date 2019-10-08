@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsouza-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/06 14:30:58 by gsouza-p          #+#    #+#             */
-/*   Updated: 2019/10/06 14:39:22 by gsouza-p         ###   ########.fr       */
+/*   Created: 2019/10/07 13:00:50 by gsouza-p          #+#    #+#             */
+/*   Updated: 2019/10/07 13:33:33 by gsouza-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_print_alphabet(void);
+#include <unistd.h>
 
-int main(void){
-char a;
-a = 'a';
-ft_print_alphabet();
+void ft_print_numbers(void)
+{
+	char i;
+
+	i = '1';
+	while (i <= '9')
+	{
+		write(1, &i, 1);
+		i++;
+	}
 }
+
