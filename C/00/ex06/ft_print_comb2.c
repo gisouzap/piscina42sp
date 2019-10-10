@@ -1,25 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsouza-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 13:00:50 by gsouza-p          #+#    #+#             */
-/*   Updated: 2019/10/10 14:12:09 by gsouza-p         ###   ########.fr       */
+/*   Created: 2019/10/08 16:44:51 by gsouza-p          #+#    #+#             */
+/*   Updated: 2019/10/10 14:16:06 by gsouza-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_numbers(void)
+void	print(int a)
 {
-	char i;
+	char u;
+	char d;
 
-	i = '\0';
-	while (i <= '9')
+	d = (a / 10) + 48;
+	u = (a % 10) + 48;
+	write(1, &d, 1);
+	write(1, &u, 1);
+}
+
+void	ft_print_comb2(void)
+{
+	int a;
+	int b;
+
+	a = 0;
+	b = 0;
+	while (a <= 99)
 	{
-		write(1, &i, 1);
-		i++;
+		b = a + 1;
+		while (b <= 99)
+		{
+			print(a);
+			write(1, " ", 1);
+			print(b);
+			if (a != 98 || b != 99)
+				write(1, ", ", 2);
+			b++;
+		}
+		a++;
 	}
 }
